@@ -2,8 +2,6 @@ import sys
 import argparse
 from yolo import YOLO, detect_video
 from PIL import Image
-import sys
-sys.path.insert(1,'/usr/local/lib/python3.5/dist-packages')
 def detect_img(yolo):
     while True:
         img = input('Input image filename:')

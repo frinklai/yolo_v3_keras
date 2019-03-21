@@ -18,8 +18,8 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 import sys
+sys.path.insert(1,'/home/iclab-arm/.local/lib/python3.5/site-packages/')
 
-sys.path.insert(1,'/usr/local/lib/python3.5/dist-packages')
 class YOLO(object):
     _defaults = {
         "model_path": 'model_data/yolo.h5',
@@ -173,7 +173,6 @@ class YOLO(object):
 
 def detect_video(yolo, video_path, output_path=""):
     import cv2
-    
     video_path = 0
     vid = cv2.VideoCapture(video_path)
     if not vid.isOpened():
